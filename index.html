@@ -6,56 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Migos Fan Site</title>
     <style>
+        /* General Styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
         }
 
         header {
-            background-color: #000;
-            color: #fff;
-            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
         }
 
         header ul {
             list-style: none;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             padding: 0;
+            margin: 0;
         }
 
         header ul li {
-            display: inline;
+            margin: 0 15px;
         }
 
         header ul li a {
-            color: #fff;
+            color: white;
             text-decoration: none;
-            padding: 5px 10px;
+            font-size: 18px;
+        }
+
+        header ul li a:hover {
+            text-decoration: underline;
         }
 
         section {
             padding: 20px;
             margin: 20px;
             border: 1px solid #ddd;
-            border-radius: 5px;
-            background: #fff;
+            border-radius: 8px;
+            background: white;
+        }
+
+        #hero {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        #hero h1 {
+            font-size: 36px;
+        }
+
+        #hero p {
+            font-size: 18px;
+        }
+
+        #about h2, #media h2, #events h2, #member-info h2, #merch h2 {
+            color: #555;
         }
 
         footer {
-            background-color: #000;
-            color: #fff;
+            background-color: #333;
+            color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
+        }
+
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 
 <body>
-    <!-- Same HTML structure as Stage 1 -->
+    <!-- Header -->
     <header>
         <ul>
             <li><a href="#hero">Home</a></li>
@@ -67,21 +97,25 @@
         </ul>
     </header>
 
+    <!-- Hero Section -->
     <section id="hero">
         <h1>Welcome to the Migos World</h1>
         <p>The culture, the vibe, the legacy.</p>
     </section>
 
+    <!-- About Section -->
     <section id="about">
         <h2>About Migos</h2>
         <p>Migos, the iconic Atlanta-based hip-hop trio of Offset, Quavo, and Takeoff...</p>
     </section>
 
+    <!-- Media Section -->
     <section id="media">
         <h2>Media</h2>
         <p>Relive iconic moments with Migos.</p>
     </section>
 
+    <!-- Events Section -->
     <section id="events">
         <h2>Events</h2>
         <ul>
@@ -89,6 +123,7 @@
         </ul>
     </section>
 
+    <!-- Member Info Section -->
     <section id="member-info">
         <h2>Member Details</h2>
         <div>
@@ -105,11 +140,12 @@
         </div>
     </section>
 
+    <!-- Merch Section -->
     <section id="merch">
         <h2>Merchandise</h2>
-        <p>Shop exclusive Migos merchandise!</p>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Migos Fan Site. All rights reserved.</p>
     </footer>
