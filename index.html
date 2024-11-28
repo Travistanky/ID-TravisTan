@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Migos Fan Site</title>
     <style>
-        /* Body Styling */
+        /* General Styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            scroll-behavior: smooth;
         }
 
         /* Header Styling */
@@ -61,7 +62,6 @@
             background: #333;
             color: #fff;
             padding: 50px 20px;
-            border: none;
             margin: 0 20px 20px;
             border-radius: 10px;
         }
@@ -72,17 +72,23 @@
         }
 
         /* Media Section */
+        #media {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
         #media img {
             width: 100%;
             max-width: 300px;
-            margin: 10px;
             border-radius: 10px;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         #media img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         /* Events Section */
@@ -102,16 +108,81 @@
         }
 
         /* Member Details Section */
+        #member-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
         #member-info div {
+            padding: 20px;
             border: 1px solid #ddd;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
-            transition: box-shadow 0.3s;
+            border-radius: 10px;
+            background: #f9f9f9;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         #member-info div:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Merch Section */
+        #merch {
+            text-align: center;
+        }
+
+        .merch-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .merch-item {
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .merch-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .merch-item img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .merch-item h3 {
+            margin: 15px 0 10px;
+            color: #333;
+        }
+
+        .merch-item p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .merch-item .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ffcc00;
+            color: #000;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .merch-item .btn:hover {
+            background: #e6b800;
         }
 
         /* Footer Styling */
@@ -119,8 +190,7 @@
             background-color: #000;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
+            padding: 20px 0;
         }
     </style>
 </head>
@@ -149,10 +219,9 @@
 
     <section id="media">
         <h2>Media</h2>
-        <p>Relive iconic moments with Migos.</p>
-        <img src="https://via.placeholder.com/300x200" alt="Migos 1">
-        <img src="https://via.placeholder.com/300x200" alt="Migos 2">
-        <img src="https://via.placeholder.com/300x200" alt="Migos 3">
+        <img src="https://static.independent.co.uk/2024/11/15/00/newFile.jpg" alt="Migos 1">
+        <img src="https://media.gq.com/photos/62cd9a29d96ae0101ce2c817/master/w_1600%2Cc_limit/GQ0822_Quavo_D_15.jpg" alt="Migos 2">
+        <img src="https://imageio.forbes.com/specials-images/imageserve/6361c22576bdded7f608fd10/Takeoff-performs-onstage-in-Los-Angeles-/960x0.jpg?format=jpg&width=960" alt="Migos 3">
     </section>
 
     <section id="events">
@@ -176,6 +245,22 @@
         <div>
             <h3>Takeoff</h3>
             <p>The lyrical powerhouse with a smooth delivery.</p>
+        </div>
+    </section>
+
+    <section id="merch">
+        <h2>Merchandise</h2>
+        <div class="merch-items">
+            <div class="merch-item">
+                <img src="https://images.stockx.com/images/Migos-Migos-Three-Vintage-Hoodie-Washed-Black.jpg?fit=fill&bg=FFFFFF&w=480&h=320&q=60&dpr=1&trim=color&updated_at=1623716552" alt="Migos Merch">
+                <h3>Migos Merch</h3>
+                <a class="btn" href="#">Buy Now</a>
+            </div>
+            <div class="merch-item">
+                <img src="https://images.stockx.com/images/Migos-Migos-Three-Vintage-Hoodie-Washed-Black.jpg?fit=fill&bg=FFFFFF&w=480&h=320&q=60&dpr=1&trim=color&updated_at=1623716552" alt="Migos Merch">
+                <h3>Migos Merch</h3>
+                <a class="btn" href="#">Buy Now</a>
+            </div>
         </div>
     </section>
 
