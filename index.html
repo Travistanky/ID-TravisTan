@@ -5,23 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Migos Fan Site</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Bebas+Neue&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* General Styling */
+
+        /* Body Styling */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
             background-color: #121212;
-            color: #fff;
+            color: #e0e0e0;
             scroll-behavior: smooth;
         }
 
         /* Header Styling */
         header {
-            background-color: #000;
-            padding: 15px 20px;
+            background-color:#000000;
+            padding: 20px 25px;
             position: sticky;
-            top: 0;
+            top:0%;
             z-index: 1000;
             display: flex;
             justify-content: center;
@@ -29,39 +31,39 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
         }
 
-        header ul {
+        header .nav-links {
             list-style: none;
             display: flex;
-            gap: 30px;
-            padding: 0;
-            margin: 0;
+            gap: 40px;
         }
 
-        header ul li a {
-            color: #fff;
+        header .nav-links a {
             text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            color: #e0e0e0;
+            font-weight: 700;
             padding: 8px 15px;
-            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            font-size: 25px;
         }
 
-        header ul li a:hover {
+        header .nav-links a:hover {
             background-color: #ffcc00;
-            color: #000;
+            color: #000000;
             transform: scale(1.1);
         }
 
         /* Hero Section */
         #hero {
-            text-align: center;
-            background: 
-            color: #fff;
-            height: 70vh;
+            position: relative;
+            height: 80vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
         }
 
         #hero-video {
@@ -95,180 +97,395 @@
             font-weight: 300
         }
 
-        .btn {
-            margin-top: 20px;
-            padding: 10px 25px;
-            font-size: 1.2em;
+        .hero-content .btn {
             background: #ffcc00;
-            color: #000;
+            color: #000000;
+            padding: 15px 30px;
             text-decoration: none;
-            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.2em;
+            border-radius: 50px;
             transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
         }
 
-        .btn:hover {
-            background-color: #e6b800;
+        .hero-content .btn:hover {
             transform: scale(1.1);
+            background: #f8e080;
         }
+
+
+        #about p {
+            font-size: 1.2em;
+            color: #bdbdbd;
+            margin: 0 auto 30px;
+            font-weight: 300;
+            line-height: 1.8;
+            max-width: 800px; /* Restrict text width */
+            text-align: center; /* Center-align the text */
+        }
+
 
         /* Section Styling */
         section {
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
 
         section h2 {
-            font-size: 3em;
-            color: #ffcc00;
             margin-bottom: 20px;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #ffcc00;
+            font-size: 3em;
+            letter-spacing: 1.5px;
         }
 
         section p {
             font-size: 1.2em;
-            color: #ccc;
+            color: #bdbdbd;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        /* About Section */
+        .members {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .member {
+            text-align: center;
+            max-width: 300px;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .member img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .member h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.6em;
+            color: #ffcc00;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .member p {
+            font-size: 1em;
+            color: #bdbdbd;
+            font-weight: 300;
         }
 
         /* Media Section */
-        #media {
+        .gallery {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
             justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
         }
 
-        #media img {
-            max-width: 300px;
+        .gallery img {
+            width: 100%;
+            max-width: 340px;
             border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
         }
 
-        #media img:hover {
+        .gallery img:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.7);
         }
 
         /* Events Section */
         #events ul {
             list-style: none;
-            padding: 0;
-            margin: 0 auto;
+            text-align: left;
             max-width: 600px;
+            margin: 0 auto;
         }
 
         #events ul li {
-            background: #222;
+            margin-bottom: 15px;
+            background: #1e1e1e;
             padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            transition: transform 0.3s, background-color 0.3s;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            color: #e0e0e0;
         }
 
         #events ul li:hover {
-            background-color: #ffcc00;
-            transform: scale(1.05);
+            background-color: #2a2a2a;
         }
 
-        /* Member Details Section */
-        #member-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        #events ul li strong {
+            color: #ffcc00;
+        }
+
+        
+        /* Member Info Section */
+        .member-info-container {
+            display: flex;
+            flex-direction: column;
             gap: 20px;
+            align-items: center;
         }
 
-        #member-info div {
-            background: #222;
-            padding: 20px;
-            border-radius: 10px;
+        .member-info {
+            display: flex;
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px;
+            text-align: left;
             transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
         }
 
-        #member-info div:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(255, 204, 0, 0.7);
+        .member-info img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
         }
 
-        /* Merch Section */
-        .merch-items {
+        .member-details {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .member-details h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8em;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .member-details p {
+            font-size: 1em;
+            color: #bdbdbd;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .member-info:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+        }
+
+                /* Merch Section */
+                .merch-items {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
             justify-content: center;
+            gap: 20px;
         }
 
         .merch-item {
-            background: #333;
-            border: 2px solid #444;
+            background-color: #1e1e1e;
+            border: 2px solid #ffcc00;
             border-radius: 10px;
-            padding: 20px;
-            max-width: 300px;
+            padding: 30px;
+            max-width: 350px;
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .merch-item:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 12px rgba(255, 204, 0, 0.7);
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
         }
 
         .merch-item img {
-            max-width: 100%;
-            border-radius: 10px;
+            width: 100%;
+            height: auto; /* Ensures the image maintains its aspect ratio */
+            border-radius: 8px;
+            margin-bottom: 15px;
+            object-fit: cover; /* Optional for finer control */
         }
+
 
         .merch-item h3 {
-            margin: 15px 0;
+            font-size: 25px;
+            font-family: 'Oswald', sans-serif;
             color: #ffcc00;
+            margin-bottom: 10px;
         }
 
-        .merch-item p {
-            color: #ccc;
+        .more-merch .btn {
+            font-family: 'Oswald', sans-serif;
+            font-size: 30px;
+            background: #ffcc00;
+            color: #000;
+            padding: 20px 80px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-bottom: 30px;
+        }
+
+        .more-merch .btn:hover {
+            background: #f8e080;
+        }
+
+        #merch h2 {
+            font-size: 55px;
+            font-family: 'Oswald', sans-serif;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        #merch p {
+            font-size: 20px;
+            color: #bdbdbd;
+            line-height: 1.5;
+            margin-bottom: 50px;
         }
 
         .merch-item .btn {
-            margin-top: 10px;
+            background: #ffcc00;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
-        /* Footer Styling */
-        footer {
-            background-color: #000;
-            color: #fff;
-            padding: 20px 0;
+        .merch-item .btn:hover {
+            background: #f8e080;
+        }
+
+        #contact-us {
+            background-color: #121212;
+            padding: 60px 20px;
+            color: #e0e0e0;
             text-align: center;
         }
 
-        footer .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
+        #contact-us h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            color: #ffcc00;
+            font-size: 3em;
+            margin-bottom: 20px;
         }
 
-        footer .social-links a {
-            color: #ffcc00;
+        #contactForm {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        #contactForm label {
             font-size: 1.2em;
+            color: #bdbdbd;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        #contactForm input, 
+        #contactForm textarea, 
+        #contactForm button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        #contactForm input, 
+        #contactForm textarea {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        #contactForm button {
+            background-color: #ffcc00;
+            color: #000;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        #contactForm button:hover {
+            transform: scale(1.05);
+            background-color: #f8e080;
+        }
+
+        #responseMessage {
+            margin-top: 30px;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            color: #e0e0e0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        
+        footer {
+            background-color: #0a0a0a; /* Dark background for contrast */
+            padding: 30px 0;
+            text-align: center;
+            color: #e0e0e0;
+            font-size: 1em;
+            font-family: 'Oswald', sans-serif; /* Bold and modern font for footer text */
+            border-top: 3px solid #ffcc00; /* Yellow border for a pop of color */
+        }
+
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 50px; /* Space between links */
+        }
+
+        .social-links a {
             text-decoration: none;
+            color: #ffcc00; /* Yellow color for social links */
+            font-size: 25px;
             transition: color 0.3s, transform 0.3s;
         }
 
-        footer .social-links a:hover {
-            color: #fff;
-            transform: scale(1.1);
+        .social-links a:hover {
+            color: #f0f0f0; /* Change color to teal on hover */
+            transform: scale(1.1); /* Slightly enlarge the text */
         }
-    </style>
+</style>
+
+
 </head>
 
 <body>
+    <!-- Header -->
     <header>
-        <ul>
+        <ul class="nav-links">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#media">Media</a></li>
             <li><a href="#events">Events</a></li>
             <li><a href="#member-info">Details</a></li>
             <li><a href="#merch">Merch</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
         </ul>
     </header>
 
+    <!-- Hero Section with Video Background -->
     <section id="hero">
         <video autoplay loop muted playsinline id="hero-video">
             <source src="Migos.mp4" type="video/mp4">
@@ -282,66 +499,175 @@
 
     <!-- About Section -->
 
-
     <section id="about">
         <h2>About Migos</h2>
-        <p>Migos, the iconic Atlanta-based hip-hop trio of Offset, Quavo, and Takeoff revolutionized the trap genre with their signature triplet flow...</p>
+        <p>Migos, the iconic Atlanta-based hip-hop trio of Offset, Quavo, and Takeoff, revolutionized the trap genre with their signature triplet flow, infectious hooks, and chart-topping hits like Bad and Boujee and Stir Fry. Known for their dynamic chemistry and cultural influence, Migos became global superstars with the Culture album series, shaping modern hip-hop and leaving an indelible legacy in music and beyond"</p>
+        <div class="members">
+            <a href="#member-info" class="member">
+                <img src="https://static.independent.co.uk/2024/11/15/00/newFile.jpg" alt="Offset">
+                <h3>Offset</h3>
+                <p>The versatile rapper known for his intricate flows and ad-libs.</p>
+            </a>
+            <a href="#member-info" class="member">
+                <img src="https://media.gq.com/photos/62cd9a29d96ae0101ce2c817/master/w_1600%2Cc_limit/GQ0822_Quavo_D_15.jpg" alt="Quavo">
+                <h3>Quavo</h3>
+                <p>The melodic genius and the group's frontman.</p>
+            </a>
+            <a href="#member-info" class="member">
+                <img src="https://imageio.forbes.com/specials-images/imageserve/6361c22576bdded7f608fd10/Takeoff-performs-onstage-in-Los-Angeles-/960x0.jpg?format=jpg&width=960" alt="Takeoff">
+                <h3>Takeoff</h3>
+                <p>The lyrical powerhouse with a smooth delivery.</p>
+            </a>
+        </div>
     </section>
 
+    <!-- Media Section -->
     <section id="media">
         <h2>Media</h2>
-        <img src="https://static.independent.co.uk/2024/11/15/00/newFile.jpg" alt="Migos 1">
-        <img src="https://media.gq.com/photos/62cd9a29d96ae0101ce2c817/master/w_1600%2Cc_limit/GQ0822_Quavo_D_15.jpg" alt="Migos 2">
-        <img src="https://imageio.forbes.com/specials-images/imageserve/6361c22576bdded7f608fd10/Takeoff-performs-onstage-in-Los-Angeles-/960x0.jpg?format=jpg&width=960" alt="Migos 3">
+        <p>Relive iconic moments with Migos:</p>
+        <div class="gallery">
+            <img src="https://www.billboard.com/wp-content/uploads/media/06-migos-bb7-jkdlsi-billboard-alzi-2017-1548.jpg?w=942&h=623&crop=1" alt="Migos Billboard">
+            <img src="https://thefader-res.cloudinary.com/private_images/w_640,c_limit,f_auto,q_auto:eco/MIGOS-FADER-askew_02_pvmwsn/migos-interview-culture.jpg" alt="Migos Culture">
+            <img src="https://ew.com/thmb/F1Kcj9Ug8L53i7LLfAkmVKl7Fo0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/migos-2-7d27375667094094ac7e120310fac8e0.jpg" alt="Migos Group">
+            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/gmg/NSAKHFPDKVDLNG22L65RLIIVZY.jpg" alt="Migos Concert">
+            <img src="https://townsquare.media/site/812/files/2022/05/attachment-Migos1.jpg?w=780&q=75" alt="Migos Performance">
+            <img src="https://www.billboard.com/wp-content/uploads/2021/06/cardi-b-and-migos-2021-bet-awards-billboard-1548-1624848048.jpg" alt="Migos BET Awards">
+            <img src="https://media.khou.com/assets/KHOU/images/f9f37f3c-9ef3-45fd-a510-1a834fe5adb5/f9f37f3c-9ef3-45fd-a510-1a834fe5adb5_1920x1080.jpg" alt="Migos Live Stage">
+        </div>
     </section>
 
+    <!-- Events Section -->
     <section id="events">
         <h2>Events</h2>
+        <p>Catch Migos live on tour:</p>
         <ul>
             <li><strong>The Culture Tour:</strong> Jan 10, 2025 - Atlanta, GA</li>
             <li><strong>Live in LA:</strong> Feb 5, 2025 - Los Angeles, CA</li>
         </ul>
+        <h3>Past Events</h3>
+        <ul>
+            <li><strong>Rolling Loud:</strong> Dec 5, 2023 - Miami, FL</li>
+            <li><strong>Wireless Festival:</strong> July 8, 2024 - London, UK</li>
+        </ul>
     </section>
 
-    <section id="member-info">
+    <!-- Member Info Section -->
+    <section id="member-info" class="member-info-section">
         <h2>Member Details</h2>
-        <div>
-            <h3>Offset</h3>
-            <p>Known for his intricate flows and ad-libs...</p>
-        </div>
-        <div>
-            <h3>Quavo</h3>
-            <p>The melodic genius and the group's frontman.</p>
-        </div>
-        <div>
-            <h3>Takeoff</h3>
-            <p>The lyrical powerhouse with a smooth delivery.</p>
+        <div class="member-info-container">
+            <!-- Offset -->
+            <div class="member-info">
+                <img src="https://vz.cnwimg.com/wp-content/uploads/2018/02/Offset.jpg" alt="Offset">
+                <div class="member-details">
+                    <h3>Offset</h3>
+                    <p>Kiari Kendrell Cephus, known professionally as Offset, is a founding member of Migos. Offset is known for his unique voice, intricate flows, and ad-libs that helped define the group’s trap sound. Beyond Migos, he has a successful solo career and collaborations with top artists.</p>
+                </div>
+            </div>
+
+            <!-- Quavo -->
+            <div class="member-info">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQal2DbyDzIoIqz_n5lBt-9j3NCuO5BJ2zvrA&s" alt="Quavo">
+                <div class="member-details">
+                    <h3>Quavo</h3>
+                    <p>Quavious Keyate Marshall, better known as Quavo, is the frontman of Migos. Quavo's melodic hooks and rhythmic versatility have brought Migos chart-topping hits. As the most visible member, he bridges the group's sound with mainstream audiences.</p>
+                </div>
+            </div>
+
+            <!-- Takeoff -->
+            <div class="member-info">
+                <img src="https://www.rollingstone.com/wp-content/uploads/2023/09/Quavo-Congress-lead.jpg?w=1581&h=1054&crop=1" alt="Takeoff">
+                <div class="member-details">
+                    <h3>Takeoff</h3>
+                    <p>Kirshnik Khari Ball, famously known as Takeoff, is the lyrical engine of Migos. His deep, introspective verses and smooth delivery have earned him acclaim as one of the most talented rappers of his generation. Takeoff has left a lasting legacy through his unmatched creativity.</p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Merch Section -->
     <section id="merch">
-        <h2>Merchandise</h2>
+        <h2>OFFICIAL MIGOS MERCHANDISE</h2>
+        <p>Shop exclusive Migos merchandise and show your love for the culture!</p>
         <div class="merch-items">
+            <!-- Hoodie -->
             <div class="merch-item">
-                <img src="https://images.stockx.com/images/Migos-Migos-Three-Vintage-Hoodie-Washed-Black.jpg" alt="Migos Hoodie">
-                <h3>Migos Hoodie</h3>
-                <a class="btn" href="https://stockx.com/migos-migos-three-vintage-hoodie-washed-black" target="_blank">Buy Now</a>
+                <img src="https://images.stockx.com/images/Migos-Migos-Three-Vintage-Hoodie-Washed-Black.jpg?fit=fill&bg=FFFFFF&w=480&h=320&q=60&dpr=1&trim=color&updated_at=1623716552" alt="Migos Hoodie">
+                <h3>Migos Vintage Hoodie</h3>
+                <p>Stay warm with this exclusive washed black hoodie featuring a vintage design.</p>
+                <a class="btn" href="https://stockx.com/migos-migos-three-vintage-hoodie-washed-black" target="_blank" >Buy Now</a>
             </div>
+            <!-- Club Jersey -->
             <div class="merch-item">
-                <img src="https://images.stockx.com/images/Migos-Migos-Three-Vintage-Hoodie-Washed-Black.jpg" alt="Migos Hoodie">
-                <h3>Migos Hoodie</h3>
-                <a class="btn" href="https://stockx.com/migos-migos-three-vintage-hoodie-washed-black" target="_blank">Buy Now</a>
+                <img src="https://images.stockx.com/images/Migos-x-Gallery-Dept-For-Culture-III-Club-Jersey-Black-Gold.jpg?fit=fill&bg=FFFFFF&w=480&h=320&q=60&dpr=1&trim=color&updated_at=1623716554" alt="Migos Club Jersey">
+                <h3>Migos Club Jersey</h3>
+                <p>Rep the culture with this sleek black and gold club jersey from Gallery Dept.</p>
+                <a class= "btn" href="https://stockx.com/migos-x-gallery-dept-for-culture-iii-club-jersey-black-gold" target="_blank" >Buy Now</a>
             </div>
+            <!-- Hat -->
+            <div class="merch-item">
+                <img src="https://images.stockx.com/images/Migos-x-Gallery-Dept-For-Culture-III-Hat-Black.jpg?fit=fill&bg=FFFFFF&w=480&h=320&q=60&dpr=1&trim=color&updated_at=1623716554" alt="Migos Hat">
+                <h3>Migos Hat</h3>
+                <p>Stylish black hat with bold YRN branding for fans of the Culture III era.</p>
+                <a class= "btn" href="https://stockx.com/migos-x-gallery-dept-for-culture-iii-hat-black" target="_blank" >Buy Now</a>
+            </div>
+            <!-- Flare Sweat Pant -->
+            <div class="merch-item">
+                <img src="https://images.stockx.com/images/Migos-x-Gallery-Dept-For-Culture-III-Flare-Sweat-Pant-Red-Navy.jpg?fit=fill&bg=FFFFFF&w=480&h=320&q=60&dpr=1&trim=color&updated_at=1623716554" alt="Migos Sweat Pants">
+                <h3>Migos Flare Sweat Pant</h3>
+                <p>Comfort meets style with these red and navy flare sweatpants from Culture III.</p>
+                <a class= "btn" href="https://stockx.com/migos-x-gallery-dept-for-culture-iii-flare-sweat-pant-red-navy" target="_blank" >Buy Now</a>
+            </div>
+            <!-- YRN T-Shirt -->
+            <div class="merch-item">
+                <img src="https://images.stockx.com/images/Migos-x-Gallery-Dept-For-Culture-III-YRN-T-Shirt-Washed-Black.jpg?fit=fill&bg=FFFFFF&w=480&h=320&q=60&dpr=1&trim=color&updated_at=1623716555" alt="Migos T-Shirt">
+                <h3>Migos YRN T-Shirt</h3>
+                <p>Classic washed black T-shirt featuring the YRN logo. For true fans only.</p>
+                <a class= "btn" href="https://stockx.com/migos-x-gallery-dept-for-culture-iii-yrn-t-shirt-washed-black" target="_blank" >Buy Now</a>
+            </div>
+            <!-- YRN Hoodie -->
+            <div class="merch-item">
+                <img src="https://images.stockx.com/images/Migos-x-Gallery-Dept-For-Culture-III-YRN-Hoodie-Washed-Black.jpg?fit=fill&bg=FFFFFF&w=480&h=320&q=60&dpr=1&trim=color&updated_at=1623716555" alt="Migos YRN Hoodie">
+                <h3>Migos YRN Hoodie</h3>
+                <p>Cozy washed black hoodie with YRN branding. Perfect for chilly days.</p>
+                <a class= "btn" href="https://stockx.com/migos-x-gallery-dept-for-culture-iii-yrn-hoodie-washed-black" target="_blank" >Buy Now</a>
+            </div>
+
         </div>
+    </section>
+
+    <section>
+        <div class="more-merch">
+            <a class= "btn" href="https://stockx.com/migos-x-gallery-dept-for-culture-iii-yrn-hoodie-washed-black" target="_blank" >More Merch</a>
+        </div>
+    </section>
+
+    <section id="contact-us">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" placeholder="Your name" required><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="Your email" required><br><br>
+
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea><br><br>
+
+            <button type="submit" id="submitButton">Submit</button>
+        </form>
+        <div id="formResponse"></div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Migos Fan Site. All rights reserved.</p>
         <div class="social-links">
             <a href="https://www.instagram.com/migos/?hl=en" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/@Migosatl" target="_blank">X</a>
             <a href="https://www.youtube.com/@Migosatl" target="_blank">YouTube</a>
         </div>
     </footer>
-</body>
+
+    <script src="script.js"></script>
+
+    
 
 </html>
